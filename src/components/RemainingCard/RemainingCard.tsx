@@ -1,5 +1,5 @@
 import React from 'react';
 
 export const RemainingCard = () => {
-  return <div>RemainingCard</div>;
+  return <div>Remaining:</div>;
 };

@@ -1,5 +1,10 @@
 import React from 'react';
 
 export const BudgetCard = () => {
-  return <div>BudgetCard</div>;
+  return (
+    <div>
+      <div>Budget: </div>
+      <button>Edit</button>
+    </div>
+  );
 };

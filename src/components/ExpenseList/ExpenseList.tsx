@@ -1,5 +1,10 @@
 import React from 'react';
+import { ExpenseItem } from '../ExpenseItem/ExpenseItem';
 
 export const ExpenseList = () => {
-  return <div>ExpenseList</div>;
+  return (
+    <div>
+      <ExpenseItem></ExpenseItem>
+    </div>
+  );
 };

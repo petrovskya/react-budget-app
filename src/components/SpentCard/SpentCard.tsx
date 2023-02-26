@@ -1,5 +1,5 @@
 import React from 'react';
 
 export const SpentCard = () => {
-  return <div>SpentCard</div>;
+  return <div>Spent so far:</div>;
 };
