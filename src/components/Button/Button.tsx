@@ -1,5 +1,6 @@
 import React from 'react';
+import { StyledButton } from 'components';
 
 export const Button = () => {
-  return <button>Done</button>;
+  return <StyledButton>Done</StyledButton>;
 };

@@ -1,21 +1,34 @@
 import React from 'react';
-import { StyledSection, Header } from '../../ui/appStyles';
-import { BudgetCard } from '../BudgetCard/BudgetCard';
-import { RemainingCard } from '../RemainingCard/RemainingCard';
-import { Select } from '../Select/Select';
-import { SpentCard } from '../SpentCard/SpentCard';
-import { Title } from '../Title/Title';
+import { StyledSection, StyledHeader } from 'ui';
+import {
+  BudgetCard,
+  Title,
+  RemainingCard,
+  CustomSelect,
+  SpentCard,
+} from 'components';
+import { Currency } from 'config/Currency';
+import { CurrencyOption } from 'components/CustomSelect/CustomSelect';
+import { useSelect } from 'hooks/useSelect';
+
+export const options: CurrencyOption[] = [
+  { label: 'USD', value: Currency.USD },
+  { label: 'EUR', value: Currency.EUR },
+  { label: 'GBR', value: Currency.GBR },
+];
 
 export const Budget = () => {
+  const currency = useSelect();
+  console.log({ ...currency });
   return (
     <StyledSection>
-      <Header>
-        <Title></Title>
-        <Select></Select>
-      </Header>
-      <BudgetCard></BudgetCard>
-      <RemainingCard></RemainingCard>
-      <SpentCard></SpentCard>
+      <StyledHeader>
+        <Title />
+        <CustomSelect options={options} {...currency} />
+      </StyledHeader>
+      <BudgetCard />
+      <RemainingCard />
+      <SpentCard />
     </StyledSection>
   );
 };

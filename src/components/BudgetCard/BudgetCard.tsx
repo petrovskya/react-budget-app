@@ -1,10 +1,12 @@
 import React from 'react';
+import { StyledEditButton } from 'ui';
+import { StyledBudgetCard } from 'components';
 
 export const BudgetCard = () => {
   return (
-    <div>
+    <StyledBudgetCard>
       <div>Budget: </div>
-      <button>Edit</button>
-    </div>
+      <StyledEditButton>Edit</StyledEditButton>
+    </StyledBudgetCard>
   );
 };

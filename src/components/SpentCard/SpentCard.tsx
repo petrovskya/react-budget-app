@@ -1,5 +1,6 @@
 import React from 'react';
+import { StyledSpentCard } from 'components';
 
 export const SpentCard = () => {
-  return <div>Spent so far:</div>;
+  return <StyledSpentCard>Spent so far:</StyledSpentCard>;
 };

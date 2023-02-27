@@ -1,8 +1,6 @@
 import React from 'react';
-import { StyledSection } from '../../ui/appStyles';
-import { ExpenseList } from '../ExpenseList/ExpenseList';
-import { Input } from '../Input/Input';
-import { Title } from '../Title/Title';
+import { StyledSection } from 'ui';
+import { ExpenseList, Title, Input } from 'components';
 
 export const Expenses = () => {
   return (
