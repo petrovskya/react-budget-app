@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 
-export const StyledButton = styled.div`
+export const StyledButton = styled.button`
   padding: 15px 147px;
+  width: 100%;
   background: rgba(35, 201, 255, 1);
   border-radius: 10px;
-  font-size: 14px;
-  font-weight: 500;
+  border: none;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
   text-align: center;
-  color: rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
 `;

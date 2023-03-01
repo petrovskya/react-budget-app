@@ -22,10 +22,12 @@ const StyledHeader = styled.div`
   width: 100%;
   gap: 30px;
 `;
-const StyledEditButton = styled.div`
+const StyledEditButton = styled.button`
   padding: 10px 30px;
+  border: none;
   background: rgba(255, 255, 255, 1);
   border-radius: 10px;
+  font-family: inherit;
   font-size: 14px;
   font-weight: 500;
   color: rgba(0, 0, 0, 1);
