@@ -1,24 +1,24 @@
-import React, { HTMLInputTypeAttribute } from 'react';
+import React, { ChangeEvent, HTMLInputTypeAttribute } from 'react';
 import {
   Message,
+  RefCallBack,
   useForm,
   UseFormRegister,
   ValidationRule,
 } from 'react-hook-form';
 import { StyledInput } from './styles';
-import { FormValues } from 'components/Form/Form';
+import { InputTypes } from 'components/Form/Form';
 export type FieldValues = Record<string, any>;
 
-// export interface InputHooks {
-//   value: string;
-//   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-// }
-// export interface InputProps {
-//   placeholder: string;
-//   register: UseFormRegister<FormValues>;
-//   type: HTMLInputTypeAttribute;
-// }
+export interface InputProps {
+  placeholder: string;
+  name: 'name' | 'cost';
+  // register: UseFormRegister<InputTypes>;
+  type: HTMLInputTypeAttribute;
+  // value: string;
+  // onChange: (event: ChangeEvent<HTMLInputElement>) => any;
+}
 
-export const Input = () => {
-  return <StyledInput />;
+export const Input = ({ register, name, ...rest }: any) => {
+  return <StyledInput {...rest} {...register(name)} />;
 };

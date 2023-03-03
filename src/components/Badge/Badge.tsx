@@ -1,5 +1,6 @@
 import { Currency } from 'config/Currency';
 import React from 'react';
+import { StyledBadge } from './styles';
 
 export interface BadgeProps {
   label: Currency;
@@ -7,9 +8,9 @@ export interface BadgeProps {
 }
 export const Badge = ({ label, value }: BadgeProps) => {
   return (
-    <div>
+    <StyledBadge>
       {label}
       {value}
-    </div>
+    </StyledBadge>
   );
 };

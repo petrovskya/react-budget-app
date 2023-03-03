@@ -4,6 +4,7 @@ import { ReactComponent as CloseIcon } from '../../assets/icons/close.svg';
 import { useExpensesContext } from 'context/ExpensesContext/ExpensesContext';
 import { Expense } from 'context/ExpensesContext/types';
 import { Currency } from 'config/Currency';
+import { ExpenseItemBadge, StyledExpenseItem } from './styles';
 
 export interface ExpenseItemProps {
   value: Expense;
@@ -14,10 +15,12 @@ export const ExpenseItem = ({
   onclick,
 }: ExpenseItemProps) => {
   return (
-    <li key={id}>
+    <StyledExpenseItem key={id}>
       <span>{name}</span>
-      <Badge label={Currency.USD} value={cost} />
-      <CloseIcon onClick={onclick} />
-    </li>
+      <ExpenseItemBadge>
+        <Badge label={Currency.USD} value={cost} />
+        <CloseIcon onClick={onclick} />
+      </ExpenseItemBadge>
+    </StyledExpenseItem>
   );
 };
