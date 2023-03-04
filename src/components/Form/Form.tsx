@@ -4,8 +4,6 @@ import { Input } from '../Input/Input';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { v4 as v4 } from 'uuid';
 import { StyledForm } from './styles';
-import { useCurrencyContext } from 'context/CurrencyContext/CurrencyContext';
-
 export interface FormValues {
   name: string;
   cost: number;
@@ -35,7 +33,7 @@ export const Form = () => {
         required={true}
         maxLength={15}
       />
-      {errors.name && 'This field is required. Only letters. Max.length - 15.'}
+      {errors.name && 'This field is required. Max.length - 15.'}
       <Input
         name='cost'
         type='number'
@@ -44,7 +42,7 @@ export const Form = () => {
         required={true}
         maxLength={5}
       />
-      {errors.cost && 'This field is required. Only numbers. Max.length - 5.'}
+      {errors.cost && 'Enter cost!!!. Only numbers. Max.length - 5.'}
       <Button type='submit' />
     </StyledForm>
   );

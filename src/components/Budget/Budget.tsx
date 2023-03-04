@@ -7,7 +7,6 @@ import {
   SpentCard,
   CustomSelect,
 } from 'components';
-import { useCurrencyContext } from 'context/CurrencyContext/CurrencyContext';
 
 export const Budget = () => {
   return (

@@ -1,8 +1,7 @@
 import { HTMLInputTypeAttribute } from 'react';
-import { UseFormRegister, ValidationValue } from 'react-hook-form';
+import { UseFormRegister } from 'react-hook-form';
 import { StyledInput } from './styles';
 import { FormValues } from 'components/Form/Form';
-export type FieldValues = Record<string, any>;
 
 export interface InputProps {
   placeholder: string;

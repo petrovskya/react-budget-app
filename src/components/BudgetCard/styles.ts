@@ -12,3 +12,17 @@ export const StyledBudgetCard = styled.div`
   font-weight: 500;
   color: rgba(0, 0, 0, 1);
 `;
+export const StyledEditInput = styled.input`
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.6);
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+`;

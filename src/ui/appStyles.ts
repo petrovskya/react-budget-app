@@ -11,14 +11,12 @@ const StyledApp = styled.div`
 const StyledSection = styled.div`
   display: grid;
   place-items: center;
-  gap: 30px;
 `;
 const StyledHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  gap: 30px;
 `;
 const StyledEditButton = styled.button`
   padding: 10px 30px;

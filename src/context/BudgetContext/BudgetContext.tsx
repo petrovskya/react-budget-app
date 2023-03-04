@@ -8,11 +8,11 @@ export const BudgetContext = createContext<BudgetContextValue>(
 export const useBudgetContextValue = () => {
   const [budgetContext, setBudgetContext] = useState<BudgetContextValue>(() => {
     return {
-      budget: 0,
-      setBudget: (budget) => {
+      budget: 3000,
+      setBudget: (newBudget) => {
         setBudgetContext((ctx) => ({
           ...ctx,
-          budget,
+          budget: newBudget,
         }));
       },
     };
@@ -21,7 +21,7 @@ export const useBudgetContextValue = () => {
 };
 export const useBudgetContext = () =>
   useContext<BudgetContextValue>(BudgetContext);
-export const CurrencyContextProvider = ({
+export const BudgetContextProvider = ({
   children,
 }: BudgetContextProviderProps) => {
   return (

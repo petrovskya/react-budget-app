@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 
 export interface ExpensesContextValue {
   expenses: Expense[];
+  spending: number;
   addNewExpense: (expense: Expense) => void;
   deleteExpense: (id: string) => void;
 }
