@@ -6,9 +6,9 @@ import { StyledInput } from 'components/Input/styles';
 export const Expenses = () => {
   return (
     <StyledSection>
-      <Title></Title>
+      <Title title='Expenses' />
       <StyledInput placeholder='search...'></StyledInput>
-      <ExpenseList></ExpenseList>
+      <ExpenseList />
     </StyledSection>
   );
 };

@@ -4,27 +4,17 @@ import {
   BudgetCard,
   Title,
   RemainingCard,
-  CustomSelect,
   SpentCard,
+  CustomSelect,
 } from 'components';
-import { Currency } from 'config/Currency';
-import { CurrencyOption } from 'components/CustomSelect/CustomSelect';
-import { useSelect } from 'hooks/useSelect';
-
-export const options: CurrencyOption[] = [
-  { label: 'USD', value: Currency.USD },
-  { label: 'EUR', value: Currency.EUR },
-  { label: 'GBR', value: Currency.GBR },
-];
+import { useCurrencyContext } from 'context/CurrencyContext/CurrencyContext';
 
 export const Budget = () => {
-  const currency = useSelect();
-  console.log({ ...currency });
   return (
     <StyledSection>
       <StyledHeader>
-        <Title />
-        <CustomSelect options={options} {...currency} />
+        <Title title='Budget' />
+        <CustomSelect />
       </StyledHeader>
       <BudgetCard />
       <RemainingCard />

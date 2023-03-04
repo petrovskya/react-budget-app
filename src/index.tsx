@@ -1,10 +1,8 @@
 import React from 'react';
-
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { GlobalStyles } from './ui/globalStyles';
-
-import { ExpensesContextProvider } from 'context/ExpensesContext/ExpensesContext';
+import { AppContextProvider } from 'context/AppContext/AppContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,8 +11,8 @@ const root = ReactDOM.createRoot(
 root.render(
   <>
     <GlobalStyles />
-    <ExpensesContextProvider>
+    <AppContextProvider>
       <App />
-    </ExpensesContextProvider>
+    </AppContextProvider>
   </>
 );
