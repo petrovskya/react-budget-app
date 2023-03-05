@@ -7,6 +7,7 @@ import {
   SpentCard,
   CustomSelect,
 } from 'components';
+import { StyledBudget } from './styles';
 
 export const Budget = () => {
   return (
@@ -15,9 +16,11 @@ export const Budget = () => {
         <Title title='Budget' />
         <CustomSelect />
       </StyledHeader>
-      <BudgetCard />
-      <RemainingCard />
-      <SpentCard />
+      <StyledBudget>
+        <BudgetCard />
+        <RemainingCard />
+        <SpentCard />
+      </StyledBudget>
     </StyledSection>
   );
 };

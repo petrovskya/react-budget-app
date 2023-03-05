@@ -11,6 +11,7 @@ const StyledApp = styled.div`
 const StyledSection = styled.div`
   display: grid;
   place-items: center;
+  gap: 30px;
 `;
 const StyledHeader = styled.div`
   display: flex;
