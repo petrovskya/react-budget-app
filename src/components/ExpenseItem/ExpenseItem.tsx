@@ -4,19 +4,18 @@ import { ReactComponent as CloseIcon } from '../../assets/icons/close.svg';
 import { Expense } from 'context/ExpensesContext/types';
 import { ExpenseItemBadge, StyledExpenseItem } from './styles';
 import { useCurrencyContext } from 'context/CurrencyContext/CurrencyContext';
-import { useExpensesContext } from 'context/ExpensesContext/ExpensesContext';
 
 export interface ExpenseItemProps {
   expense: Expense;
   onclick: MouseEventHandler<SVGSVGElement> | undefined;
 }
 export const ExpenseItem = ({
-  expense: { id, name, cost },
+  expense: { name, cost },
   onclick,
 }: ExpenseItemProps) => {
   const { currency } = useCurrencyContext();
   return (
-    <StyledExpenseItem key={id}>
+    <StyledExpenseItem>
       <span>{name}</span>
       <ExpenseItemBadge>
         <Badge label={currency.value} value={cost} />

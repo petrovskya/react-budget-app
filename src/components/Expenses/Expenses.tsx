@@ -12,23 +12,24 @@ import { Expense } from 'context/ExpensesContext/types';
 export const Expenses = () => {
   const { expenses } = useExpensesContext();
   const searchValue = useInput();
-  const debouncedValue = useDebounce(searchValue.value, 500);
+  const debouncedValue = useDebounce(searchValue.value, 300);
   const [filteredExpenses, setFilteredExpenses] = useState<Expense[]>(expenses);
   useEffect(() => {
-    // if (debouncedValue === '') {
-    setFilteredExpenses(
-      expenses.filter(
-        (expense) => expense.name.toLowerCase() === debouncedValue.toLowerCase()
-      )
-    );
-    // }
+    debouncedValue
+      ? setFilteredExpenses(
+          expenses.filter(
+            (expense) =>
+              expense.name.toLowerCase() === debouncedValue.toLowerCase()
+          )
+        )
+      : setFilteredExpenses(expenses);
   }, [debouncedValue, expenses]);
-  console.log(filteredExpenses, expenses);
+
   return (
     <StyledSection>
       <Title title='Expenses' />
       <SearchInput placeholder='search...' {...searchValue} />
-      {expenses.length ? (
+      {filteredExpenses.length ? (
         <ExpenseList filtered={filteredExpenses} />
       ) : (
         <StyledText>Oooops 🙈</StyledText>
