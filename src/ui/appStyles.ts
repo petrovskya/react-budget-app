@@ -2,15 +2,17 @@ import styled from 'styled-components';
 
 const StyledApp = styled.div`
   display: grid;
+  margin: 0 auto;
   gap: 30px;
   padding: 30px 20px;
-  max-width: 100%;
+  max-width: 768px;
   min-height: 100vh;
   font-family: 'Inter', 'san-serif';
 `;
 const StyledSection = styled.div`
   display: grid;
   place-items: center;
+  width: 100%;
   gap: 30px;
 `;
 const StyledHeader = styled.div`
