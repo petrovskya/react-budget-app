@@ -10,4 +10,10 @@ export const StyledButton = styled.button`
   font-weight: 400;
   text-align: center;
   color: rgba(255, 255, 255, 1);
+  transition-duration: 0.3s;
+  cursor: pointer;
+  &:active {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3) inset;
+    transform: scale(0.99);
+  }
 `;

@@ -4,14 +4,12 @@ import { Budget } from './components/Budget/Budget';
 import { Expenses } from './components/Expenses/Expenses';
 import { StyledApp } from './ui/appStyles';
 
-function App() {
+export const App = () => {
   return (
     <StyledApp>
-      <Budget></Budget>
-      <Expenses></Expenses>
-      <AddExpense></AddExpense>
+      <Budget />
+      <Expenses />
+      <AddExpense />
     </StyledApp>
   );
-}
-
-export default App;
+};

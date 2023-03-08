@@ -10,12 +10,10 @@ const useExpensesContextValue = () => {
     () => {
       return {
         expenses: [],
-        spending: 0,
         addNewExpense: (expense) => {
           setExpensesContext((ctx) => ({
             ...ctx,
             expenses: [...ctx.expenses, expense],
-            spending: ctx.spending + Number(expense.cost),
           }));
         },
         deleteExpense: (id) => {

@@ -4,7 +4,7 @@ import {
   StyledSection,
   StyledEditButton,
 } from './appStyles';
-import { GlobalStyles } from './globalStyles';
+import { GlobalStyles } from './GlobalStyles';
 
 export {
   GlobalStyles,

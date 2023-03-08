@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
-import { GlobalStyles } from './ui/globalStyles';
+import { App } from './App';
+import { GlobalStyles } from './ui/GlobalStyles';
 import { AppContextProvider } from 'context/AppContext/AppContext';
 
 const root = ReactDOM.createRoot(
@@ -9,10 +9,8 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  <>
+  <AppContextProvider>
     <GlobalStyles />
-    <AppContextProvider>
-      <App />
-    </AppContextProvider>
-  </>
+    <App />
+  </AppContextProvider>
 );

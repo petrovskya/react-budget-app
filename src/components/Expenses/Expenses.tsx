@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { StyledSection } from 'ui';
-import { ExpenseList, Title, Input } from 'components';
-import { StyledInput } from 'components/Input/styles';
+import { ExpenseList, Title } from 'components';
 import { useExpensesContext } from 'context/ExpensesContext/ExpensesContext';
 import { useInput } from 'hooks/useInput';
-import { StyledText } from './styles';
+import { NoFoundMessage } from './styles';
 import { useDebounce } from 'hooks/useDebounce';
 import { SearchInput } from 'components/SearchInput/SearchInput';
 import { Expense } from 'context/ExpensesContext/types';
@@ -17,9 +16,8 @@ export const Expenses = () => {
   useEffect(() => {
     debouncedValue
       ? setFilteredExpenses(
-          expenses.filter(
-            (expense) =>
-              expense.name.toLowerCase() === debouncedValue.toLowerCase()
+          expenses.filter((expense) =>
+            expense.name.toLowerCase().includes(debouncedValue.toLowerCase())
           )
         )
       : setFilteredExpenses(expenses);
@@ -32,7 +30,7 @@ export const Expenses = () => {
       {filteredExpenses.length ? (
         <ExpenseList filtered={filteredExpenses} />
       ) : (
-        <StyledText>Oooops 🙈</StyledText>
+        <NoFoundMessage>Oooops 🙈</NoFoundMessage>
       )}
     </StyledSection>
   );
