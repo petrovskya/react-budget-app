@@ -1,6 +1,5 @@
 import { Currency } from 'config/Currency';
-import { useCurrencyContext } from 'context/CurrencyContext/CurrencyContext';
-import React from 'react';
+import { useCurrencyContext } from 'context';
 import Select, { SingleValue } from 'react-select';
 import { selectStyles } from './styles';
 

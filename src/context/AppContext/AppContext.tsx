@@ -1,7 +1,4 @@
-import {
-  BudgetContext,
-  BudgetContextProvider,
-} from 'context/BudgetContext/BudgetContext';
+import { BudgetContextProvider } from 'context/BudgetContext/BudgetContext';
 import { CurrencyContextProvider } from 'context/CurrencyContext/CurrencyContext';
 import { ExpensesContextProvider } from 'context/ExpensesContext/ExpensesContext';
 import { FC, ReactNode } from 'react';

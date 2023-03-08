@@ -1,4 +1,3 @@
-import React from 'react';
 import { StyledSection } from 'ui';
 import { Title, Form } from 'components';
 

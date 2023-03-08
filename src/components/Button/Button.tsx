@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledButton } from 'components';
+import { StyledButton } from './styles';
 
 export interface ButtonProps {
   type: 'button' | 'submit' | 'reset' | undefined;

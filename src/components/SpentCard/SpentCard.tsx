@@ -1,7 +1,6 @@
 import React from 'react';
-import { StyledSpentCard } from 'components';
-import { useExpensesContext } from 'context/ExpensesContext/ExpensesContext';
-import { useCurrencyContext } from 'context/CurrencyContext/CurrencyContext';
+import { StyledSpentCard } from './styles';
+import { useExpensesContext, useCurrencyContext } from 'context';
 import { Expense } from 'context/ExpensesContext/types';
 
 export const SpentCard = () => {

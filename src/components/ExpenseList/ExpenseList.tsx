@@ -1,6 +1,6 @@
-import { useExpensesContext } from 'context/ExpensesContext/ExpensesContext';
+import { useExpensesContext } from 'context';
 import { Expense } from 'context/ExpensesContext/types';
-import { ExpenseItem } from '../ExpenseItem/ExpenseItem';
+import { ExpenseItem } from 'components';
 import { StyledExpenseList } from './styles';
 
 interface ExpenseListProps {

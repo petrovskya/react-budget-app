@@ -18,3 +18,13 @@ export const ExpenseItemBadge = styled.div`
   align-items: center;
   grid-column-gap: 20px;
 `;
+
+export const StyledDeleteButton = styled.button`
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  &:active {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1) inset;
+    transform: scale(0.99);
+  }
+`;

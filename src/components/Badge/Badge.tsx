@@ -1,5 +1,4 @@
 import { Currency } from 'config/Currency';
-import React from 'react';
 import { StyledBadge } from './styles';
 
 export interface BadgeProps {

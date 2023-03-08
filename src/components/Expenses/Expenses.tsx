@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { StyledSection } from 'ui';
 import { ExpenseList, Title } from 'components';
-import { useExpensesContext } from 'context/ExpensesContext/ExpensesContext';
-import { useInput } from 'hooks/useInput';
+import { useExpensesContext } from 'context';
+import { useInput, useDebounce } from 'hooks';
 import { NoFoundMessage } from './styles';
-import { useDebounce } from 'hooks/useDebounce';
-import { SearchInput } from 'components/SearchInput/SearchInput';
+import { SearchInput } from 'components';
 import { Expense } from 'context/ExpensesContext/types';
 
 export const Expenses = () => {

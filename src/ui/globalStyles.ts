@@ -6,7 +6,14 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     margin: 0;
   }
-  buttton { 
+  body {
+   font-family: 'Inter', 'san-serif';;
+  }
+  input {
+    border: none;
+  }
+  button { 
+    border: none;
     font-family: inherit;
   }
   ul {

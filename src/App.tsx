@@ -1,7 +1,5 @@
 import React from 'react';
-import { AddExpense } from './components/AddExpense/AddExpense';
-import { Budget } from './components/Budget/Budget';
-import { Expenses } from './components/Expenses/Expenses';
+import { AddExpense, Budget, Expenses } from 'components';
 import { StyledApp } from './ui/appStyles';
 
 export const App = () => {

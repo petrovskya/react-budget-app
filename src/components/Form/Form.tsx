@@ -1,8 +1,7 @@
-import { useExpensesContext } from 'context/ExpensesContext/ExpensesContext';
-import { Button } from '../Button/Button';
-import { Input } from '../Input/Input';
+import { useExpensesContext } from 'context';
+import { Button, Input } from 'components';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { v4 as v4 } from 'uuid';
+import { v4 } from 'uuid';
 import { StyledForm } from './styles';
 export interface FormValues {
   name: string;

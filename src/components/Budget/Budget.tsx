@@ -1,4 +1,3 @@
-import React from 'react';
 import { StyledSection, StyledHeader } from 'ui';
 import {
   BudgetCard,

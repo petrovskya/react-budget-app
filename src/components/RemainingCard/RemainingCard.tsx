@@ -1,8 +1,10 @@
 import React from 'react';
-import { StyledRemainingCard } from 'components';
-import { useBudgetContext } from 'context/BudgetContext/BudgetContext';
-import { useExpensesContext } from 'context/ExpensesContext/ExpensesContext';
-import { useCurrencyContext } from 'context/CurrencyContext/CurrencyContext';
+import { StyledRemainingCard } from './styles';
+import {
+  useBudgetContext,
+  useExpensesContext,
+  useCurrencyContext,
+} from 'context';
 import { Expense } from 'context/ExpensesContext/types';
 
 export const RemainingCard = () => {

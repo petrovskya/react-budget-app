@@ -48,10 +48,6 @@ export const selectStyles: StylesConfig<CurrencyOption> = {
         : 'rgba(35, 201, 255, 0.1)',
     },
   }),
-  // indicatorsContainer: (base) => ({
-  //   ...base,
-  //   maxWidth: 30,
-  // }),
   indicatorSeparator: (base) => ({
     ...base,
     backgroundColor: 'rgba(238, 238, 238, 1)',
@@ -61,5 +57,6 @@ export const selectStyles: StylesConfig<CurrencyOption> = {
     ...base,
     color: 'rgba(238, 238, 238, 1)',
     padding: 0,
+    cursor: 'pointer',
   }),
 };

@@ -1,11 +1,6 @@
-import React from 'react';
-import { StyledEditButton } from 'ui';
-import { StyledBudgetCard } from 'components';
-import { useToggle } from 'hooks/useToggle';
-import { StyledEditInput } from './styles';
-import { useBudgetContext } from 'context/BudgetContext/BudgetContext';
-import { useInput } from 'hooks/useInput';
-import { useCurrencyContext } from 'context/CurrencyContext/CurrencyContext';
+import { StyledEditButton, StyledBudgetCard, StyledEditInput } from './styles';
+import { useToggle, useInput } from 'hooks';
+import { useBudgetContext, useCurrencyContext } from 'context';
 
 export const BudgetCard = () => {
   const [isEditMode, toggleEditMode] = useToggle(false);
@@ -32,10 +27,8 @@ export const BudgetCard = () => {
         </>
       ) : (
         <>
-          <p>
-            Budget: {currency.value}
-            {budget}
-          </p>
+          Budget: {currency.value}
+          {budget}
           <StyledEditButton type='button' onClick={handleEdit}>
             Edit
           </StyledEditButton>
