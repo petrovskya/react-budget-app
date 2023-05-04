@@ -12,7 +12,7 @@ export const Budget = () => {
   return (
     <StyledSection>
       <StyledHeader>
-        <Title title='Your budget' />
+        <Title title='Budget' />
         <CustomSelect />
       </StyledHeader>
       <StyledBudget>

@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client';
 import { App } from './App';
-import { GlobalStyles } from 'ui';
+import { GlobalStyles } from './ui/GlobalStyles';
 import { AppContextProvider } from 'context/AppContext/AppContext';
 
 const root = ReactDOM.createRoot(
